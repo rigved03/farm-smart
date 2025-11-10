@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Farm Smart</title>
+    
+    <style>
+        /* PASTE YOUR ORIGINAL OR THE MINIMAL EDITED CSS HERE */
+        /* For this example, I'll use the MINIMAL CSS above for structure */
+        :root { 
+            --primary-color: #27ae60;
+            --secondary-color: #795548;
+            --bg-color: #ffffff;
+            --text-color: #333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding-top: 50px;
+        }
+        body h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        body p {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        body p:nth-of-type(2) {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .btn-tagline {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            background: var(--primary-color);
+            color: #fff;
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        .btn-tagline:hover {
+            background: #1e8449;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content-wrapper"> 
+        <h2>Farm Smart</h2>
+        <p class="subtitle">Your Smart Pest Control Advisor</p>
+        <p class="tagline-cta">Stop Guessing. Start Predicting.</p>
+        <a href="#contact" class="btn-tagline">Explore Platform</a>
+    </div>
+
+    <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "f2129df9-403f-4b4e-a3e3-1a53bf9edb87", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "e428888d-5214-4964-888d-78d13d3cd291", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+    });
+    </script>
+
+</body> 
+</html>
